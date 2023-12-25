@@ -1,0 +1,8 @@
+<h1>Редактировать вопрос</h1>
+
+<%= form_with model: @question, url: question_path(@question), method: :patch do |form| %>
+  <%= form.label :body %>
+  <%= form.text_field :body %>
+
+  <%= form.submit 'Сохранить' %>
+<% end %>

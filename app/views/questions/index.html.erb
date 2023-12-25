@@ -1,0 +1,16 @@
+<h1>Список вопросов</h1>
+
+<%= form_tag('/check_answers', method: :post)  do %>
+  <% @questions.each do |question| %>
+
+    <%= question.body %>
+    <p>
+    <% question.answers.each do |answer|%>
+      <%= check_box_tag 'answer_ids[]', answer.id %>
+      <%= label_tag "answer_#{answer.id}", answer.body %>
+    </p>
+    <%end%>
+  <% end %>
+  <%= submit_tag "Проверить" %>
+<% end %>
+

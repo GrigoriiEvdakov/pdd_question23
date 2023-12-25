@@ -1,0 +1,8 @@
+<h1>Создать новый вопрос</h1>
+
+<%= form_with model: @question, url: questions_path do |form| %>
+  <%= form.label :вопрос %>
+  <%= form.text_field :вопрос %>
+
+  <%= form.submit 'Сохранить' %>
+<% end %>

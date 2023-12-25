@@ -1,0 +1,12 @@
+<h1>Вопрос</h1>
+<p><%= @question %></p>
+
+<h2>Варианты ответов:</h2>
+<ul>
+  <% @answers.each do |answer| %>
+    <li><%= answer %></li>
+  <% end %>
+</ul>
+
+<h2>Правильный ответ:</h2>
+<p><%= @correct_answer %></p>
